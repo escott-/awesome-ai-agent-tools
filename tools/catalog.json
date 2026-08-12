@@ -28,7 +28,7 @@
     },
     {
       "name": "AI Coding CLIs",
-      "count": 11
+      "count": 10
     },
     {
       "name": "Agent Memory",
@@ -384,7 +384,7 @@
       "url": "https://github.com/google-gemini/gemini-cli",
       "stars": 98000,
       "crossPlatform": true,
-      "install": "npm install -g @anthropic-ai/gemini-cli"
+      "install": "npm install -g @google-gemini/cli"
     },
     {
       "id": "ollama",

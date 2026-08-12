@@ -12,7 +12,7 @@
     },
     {
       "name": "OpenCode",
-      "count": 10
+      "count": 9
     },
     {
       "name": "Cursor",
@@ -32,7 +32,7 @@
     },
     {
       "name": "VS Code AI",
-      "count": 5
+      "count": 6
     },
     {
       "name": "JetBrains",
@@ -40,7 +40,7 @@
     },
     {
       "name": "Cross-Tool",
-      "count": 5
+      "count": 6
     }
   ],
   "plugins": [

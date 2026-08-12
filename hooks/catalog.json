@@ -14,11 +14,11 @@
       },
       {
         "name": "Automation",
-        "count": 6
+        "count": 4
       },
       {
         "name": "Quality",
-        "count": 2
+        "count": 3
       },
       {
         "name": "Notifications",
@@ -35,10 +35,6 @@
       {
         "name": "Utility",
         "count": 3
-      },
-      {
-        "name": "Curated Directory",
-        "count": 1
       },
       {
         "name": "Platform Feature",

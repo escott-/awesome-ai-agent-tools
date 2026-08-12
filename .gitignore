@@ -43,8 +43,8 @@ drafts/
 # Archives (don't commit zips)
 *.zip
 
-# Scripts (internal tooling, not for repo)
-scripts/
+# Scripts output
+scripts/node_modules/
 
 # Logs
 *.log
