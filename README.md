@@ -22,7 +22,7 @@
 
 ---
 
-**610** installable components across **8** categories. Every entry is sourced from real projects with provenance and install commands. Works with Claude Code, OpenCode, Codex, Cursor, Gemini CLI, Copilot, and 30+ AI coding assistants.
+**611** installable components across **8** categories. Every entry is sourced from real projects with provenance and install commands. Works with Claude Code, OpenCode, Codex, Cursor, Gemini CLI, Copilot, and 30+ AI coding assistants.
 
 ## Contents
 
@@ -40,7 +40,7 @@
 | Library | Count | Description | Folder |
 |---------|------:|-------------|--------|
 | **Skills** | 88 | Reusable AI agent skills following the SKILL.md standard | [skills/](skills/) |
-| **MCPs** | 129 | Curated Model Context Protocol servers for AI-assisted development | [mcps/](mcps/) |
+| **MCPs** | 130 | Curated Model Context Protocol servers for AI-assisted development | [mcps/](mcps/) |
 | **Agent Loops** | 115 | Repeatable AI-agent workflows with feedback loops | [loops/](loops/) |
 | **Subagents** | 32 | Specialized agent definitions with model routing | [subagents/](subagents/) |
 | **Hooks** | 25 | Production-ready Claude Code hooks for security, automation, and quality | [hooks/](hooks/) |
@@ -74,7 +74,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) to add new entries, or give your AI agent
     - Data: 3
     - Security: 2
 
-### MCPs (129)
+### MCPs (130)
 
     - Developer Tools: 15
     - Databases: 13
@@ -85,9 +85,9 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) to add new entries, or give your AI agent
     - Agent Orchestration: 8
     - Security: 7
     - Official Reference: 6
+    - Browser Automation: 6
     - Cloud Platforms: 6
     - Monitoring: 6
-    - Browser Automation: 5
     - Research & Data: 5
     - Design: 4
     - Finance: 4
