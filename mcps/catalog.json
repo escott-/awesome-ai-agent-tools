@@ -4,7 +4,7 @@
   "description": "Curated Model Context Protocol servers for AI-assisted development",
   "license": "MIT",
   "lastUpdated": "2026-07-18",
-  "totalServers": 129,
+  "totalServers": 130,
   "categories": [
     {
       "name": "Official Reference",
@@ -16,7 +16,7 @@
     },
     {
       "name": "Browser Automation",
-      "count": 5
+      "count": 6
     },
     {
       "name": "Databases",
