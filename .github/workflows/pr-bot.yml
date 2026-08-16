@@ -13,10 +13,24 @@ jobs:
   triage:
     runs-on: ubuntu-latest
     steps:
+      # pull_request_target runs with the base repo's token/secrets, so we must
+      # NOT check out the fork's code (pwn-request risk). We check out the trusted
+      # base repo, then overlay only the PR's changed catalog.json data files.
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
+
+      - name: Fetch PR head and overlay changed catalog files
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR_NUM=${{ github.event.pull_request.number }}
+          git fetch origin "refs/pull/${PR_NUM}/head:pr-head"
+          files=$(gh api "repos/${{ github.repository }}/pulls/${PR_NUM}/files" --jq '.[].filename' | grep -E 'catalog\.json$' || true)
+          for f in $files; do
+            echo "Overlaying $f from PR head"
+            git checkout pr-head -- "$f"
+          done
 
       - uses: actions/setup-node@v4
         with:
