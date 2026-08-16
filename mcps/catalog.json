@@ -391,6 +391,24 @@
       ]
     },
     {
+      "id": "agent-qa",
+      "name": "Agent QA",
+      "category": "Browser Automation",
+      "github": "https://github.com/vostride/agent-qa",
+      "stars": 812,
+      "description": "Natural-language web and mobile test execution with persistent test memory, self-healing flows, structured evidence, and failure triage",
+      "install": "npx -y agent-qa mcp",
+      "license": "FSL-1.1-ALv2",
+      "verified": false,
+      "tags": [
+        "browser",
+        "mobile",
+        "testing",
+        "qa",
+        "self-healing"
+      ]
+    },
+    {
       "id": "firecrawl",
       "name": "Firecrawl MCP",
       "category": "Browser Automation",
