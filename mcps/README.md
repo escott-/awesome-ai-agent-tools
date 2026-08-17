@@ -2,7 +2,7 @@
 
 Curated Model Context Protocol servers for AI-assisted development
 
-**120** entries across **19** categories.
+**130** entries across **19** categories.
 
 ## Categories
 
@@ -15,9 +15,9 @@ Curated Model Context Protocol servers for AI-assisted development
 - **Agent Orchestration** (8)
 - **Security** (7)
 - **Official Reference** (6)
+- **Browser Automation** (6)
 - **Cloud Platforms** (6)
 - **Monitoring** (6)
-- **Browser Automation** (5)
 - **Research & Data** (5)
 - **Design** (4)
 - **Finance** (4)
@@ -26,7 +26,7 @@ Curated Model Context Protocol servers for AI-assisted development
 - **Blockchain** (2)
 - **Data Engineering** (1)
 
-## All 120 mcps
+## All 130 mcps
 
 | Name                              | Category              | Description                                                                                                                                                                                                                                                                         | Source                                                                                                                      | Badges                                                                                                                                                                                                                                               |
 | --------------------------------- | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -45,6 +45,7 @@ Curated Model Context Protocol servers for AI-assisted development
 | MCP Inspector                     | Developer Tools       | Official visual testing tool for MCP servers - debug tool calls, inspect responses                                                                                                                                                                                                  | [modelcontextprotocol/inspector](https://github.com/modelcontextprotocol/inspector)                                         | ![Stars](https://img.shields.io/github/stars/modelcontextprotocol/inspector?style=flat&label=Stars&color=gold) ![Last Commit](https://img.shields.io/github/last-commit/modelcontextprotocol/inspector?style=flat)                                   |
 | Chrome DevTools MCP               | Browser Automation    | Chrome DevTools for coding agents - inspect, debug, and interact with web pages                                                                                                                                                                                                     | [ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp)                                 | ![Stars](https://img.shields.io/github/stars/ChromeDevTools/chrome-devtools-mcp?style=flat&label=Stars&color=gold) ![Last Commit](https://img.shields.io/github/last-commit/ChromeDevTools/chrome-devtools-mcp?style=flat)                           |
 | Playwright MCP                    | Browser Automation    | De-facto standard for browser automation under MCP - real Chromium, accessibility-tree targeting                                                                                                                                                                                    | [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp)                                                     | ![Stars](https://img.shields.io/github/stars/microsoft/playwright-mcp?style=flat&label=Stars&color=gold) ![Last Commit](https://img.shields.io/github/last-commit/microsoft/playwright-mcp?style=flat)                                               |
+| Agent QA                          | Browser Automation    | Natural-language web and mobile test execution with persistent test memory, self-healing flows, structured evidence, and failure triage                                                                                                                                             | [vostride/agent-qa](https://github.com/vostride/agent-qa)                                                                   | ![Stars](https://img.shields.io/github/stars/vostride/agent-qa?style=flat&label=Stars&color=gold) ![Last Commit](https://img.shields.io/github/last-commit/vostride/agent-qa?style=flat)                                                             |
 | Firecrawl MCP                     | Browser Automation    | Web scraping with JavaScript rendering, crawling, and content extraction                                                                                                                                                                                                            | [mendableai/firecrawl-mcp-server](https://github.com/mendableai/firecrawl-mcp-server)                                       | ![Stars](https://img.shields.io/github/stars/mendableai/firecrawl-mcp-server?style=flat&label=Stars&color=gold) ![Last Commit](https://img.shields.io/github/last-commit/mendableai/firecrawl-mcp-server?style=flat)                                 |
 | Puppeteer MCP                     | Browser Automation    | Browser automation and web scraping via Puppeteer                                                                                                                                                                                                                                   | [modelcontextprotocol/servers-archived](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/puppeteer)   | ![Stars](https://img.shields.io/github/stars/modelcontextprotocol/servers-archived?style=flat&label=Stars&color=gold) ![Last Commit](https://img.shields.io/github/last-commit/modelcontextprotocol/servers-archived?style=flat)                     |
 | Browser Use MCP                   | Browser Automation    | AI-powered browser automation with 100K+ stars. Enables agents to browse the web, fill forms, extract data, and interact with web pages autonomously.                                                                                                                               | [browser-use/browser-use](https://github.com/browser-use/browser-use)                                                       | ![Stars](https://img.shields.io/github/stars/browser-use/browser-use?style=flat&label=Stars&color=gold) ![Last Commit](https://img.shields.io/github/last-commit/browser-use/browser-use?style=flat)                                                 |
