@@ -52,7 +52,10 @@ function isInGitRepo(filePath) {
 function stageFile(filePath) {
   try {
     const dir = path.dirname(filePath);
-    const result = spawnSync('git', ['add', filePath], { cwd: dir, stdio: 'pipe' });
+    // Pass the path as a positional argument, never through a shell. The `--`
+    // also prevents a user-controlled filename beginning with '-' from being
+    // interpreted as a git option.
+    const result = spawnSync('git', ['add', '--', filePath], { cwd: dir, stdio: 'pipe' });
     if (result.status !== 0) throw new Error(result.stderr.toString());
     return { success: true };
   } catch (e) {
