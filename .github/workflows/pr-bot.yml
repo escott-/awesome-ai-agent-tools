@@ -115,6 +115,7 @@ jobs:
       - name: Validate catalog entries
         id: catalog-check
         run: |
+          set -o pipefail
           node scripts/validate-catalogs.js 2>&1 | tee /tmp/validate-output.txt
           if [ $? -ne 0 ]; then
             echo "valid=false" >> $GITHUB_OUTPUT
@@ -128,12 +129,14 @@ jobs:
           # Get changed catalog files
           BASE_SHA=${{ github.event.pull_request.base.sha }}
           HEAD_SHA=${{ github.event.pull_request.head.sha }}
-          
+
           errors=""
           for f in */catalog.json; do
-            # Get added lines with github URLs (also match "githubUrl" key)
-            urls=$(git diff "$BASE_SHA" "$HEAD_SHA" -- "$f" | grep '^+' | grep -oE '"github(Url)?"[[:space:]]*:[[:space:]]*"[^"]*"' | grep -o 'https://github.com/[^"]*')
-            
+            # Get added lines with github URLs (also match "githubUrl" key).
+            # A PR may touch no catalog files or add no GitHub URLs; treat that
+            # as a valid result instead of failing on grep's no-match exit code.
+            urls=$(git diff "$BASE_SHA" "$HEAD_SHA" -- "$f" | grep '^+' | grep -oE '"github(Url)?"[[:space:]]*:[[:space:]]*"[^"]*"' | grep -o 'https://github.com/[^"]*' || true)
+
             for url in $urls; do
               # Extract owner/repo
               owner_repo=$(echo "$url" | sed 's|https://github.com/||' | sed 's|/$||')
@@ -160,7 +163,7 @@ jobs:
               fi
             done
           done
-          
+
           if [ -n "$errors" ]; then
             echo "valid=false" >> $GITHUB_OUTPUT
             printf "%b" "$errors" > /tmp/url-errors.txt
@@ -193,8 +196,8 @@ jobs:
 
               if (!jsonValid) {
                 const fs = require('fs');
-                const errors = fs.existsSync('/tmp/json-errors.txt') 
-                  ? fs.readFileSync('/tmp/json-errors.txt', 'utf8') 
+                const errors = fs.existsSync('/tmp/json-errors.txt')
+                  ? fs.readFileSync('/tmp/json-errors.txt', 'utf8')
                   : 'Unknown JSON errors';
                 body += '### JSON Syntax Errors\n```\n' + errors + '\n```\n\n';
               }
@@ -238,6 +241,7 @@ jobs:
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: context.issue.number,
+                comment_id: existing.id,
                 body,
               });
             }
