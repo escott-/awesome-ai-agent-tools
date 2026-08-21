@@ -2,13 +2,13 @@
 
 Curated Model Context Protocol servers for AI-assisted development
 
-**130** entries across **19** categories.
+**133** entries across **20** categories.
 
 ## Categories
 
 - **Developer Tools** (15)
 - **Databases** (13)
-- **AI & Machine Learning** (12)
+- **AI & Machine Learning** (13)
 - **Search** (11)
 - **Communication** (10)
 - **DevOps** (9)
@@ -19,14 +19,15 @@ Curated Model Context Protocol servers for AI-assisted development
 - **Cloud Platforms** (6)
 - **Monitoring** (6)
 - **Research & Data** (5)
+- **Marketing** (4)
 - **Design** (4)
 - **Finance** (4)
-- **Marketing** (3)
 - **Maps** (2)
 - **Blockchain** (2)
 - **Data Engineering** (1)
+- **Mobile** (1)
 
-## All 130 mcps
+## All 133 mcps
 
 | Name                              | Category              | Description                                                                                                                                                                                                                                                                         | Source                                                                                                                      | Badges                                                                                                                                                                                                                                               |
 | --------------------------------- | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -160,6 +161,9 @@ Curated Model Context Protocol servers for AI-assisted development
 | AWS Agent Toolkit                 | Cloud Platforms       | Official AWS-supported MCP servers, skills, and plugins to help AI agents build on AWS. Covers S3, Lambda, DynamoDB, CloudFormation, and more.                                                                                                                                      | [aws/agent-toolkit-for-aws](https://github.com/aws/agent-toolkit-for-aws)                                                   | ![Stars](https://img.shields.io/github/stars/aws/agent-toolkit-for-aws?style=flat&label=Stars&color=gold) ![Last Commit](https://img.shields.io/github/last-commit/aws/agent-toolkit-for-aws?style=flat)                                             |
 | MCP Context Server                | AI & Machine Learning | High-performance MCP server for persistent multimodal context storage. Thread-based scoping for multi-agent collaboration. 13 tools including semantic and hybrid search.                                                                                                           | [alex-feel/mcp-context-server](https://github.com/alex-feel/mcp-context-server)                                             | ![Stars](https://img.shields.io/github/stars/alex-feel/mcp-context-server?style=flat&label=Stars&color=gold) ![Last Commit](https://img.shields.io/github/last-commit/alex-feel/mcp-context-server?style=flat)                                       |
 | TrendPulse MCP                    | Search                | Connect AI models to Google News RSS feeds and Google Trends analytics. Historical interest curves, growth rates, trending queries, and NLP summarization.                                                                                                                          | [AKzar1el/mcp-trendpulse](https://github.com/AKzar1el/mcp-trendpulse)                                                       | ![Stars](https://img.shields.io/github/stars/AKzar1el/mcp-trendpulse?style=flat&label=Stars&color=gold) ![Last Commit](https://img.shields.io/github/last-commit/AKzar1el/mcp-trendpulse?style=flat)                                                 |
+| Inside Ads                        | Marketing             | Telegram ad exchange MCP: estimate reach and cost with no account, then create and run campaigns. Official registry id ad.inside/inside-ads.                                                                                                                                        |                                                                                                                             |                                                                                                                                                                                                                                                      |
+| Actwise Ideation                  | AI & Machine Learning | Helps founders benchmark startup and product ideas before they build. Official registry id ai.actwise/ideation.                                                                                                                                                                     |                                                                                                                             |                                                                                                                                                                                                                                                      |
+| Android Remote Control MCP        | Mobile                | On-device Android MCP server (57 tools) for UI control, screenshots, files, apps, and gestures. Install the APK, then point .mcp.json at http://DEVICE_IP:PORT/mcp.                                                                                                                 | [danielealbano/android-remote-control-mcp](https://github.com/danielealbano/android-remote-control-mcp)                     | ![Stars](https://img.shields.io/github/stars/danielealbano/android-remote-control-mcp?style=flat&label=Stars&color=gold) ![Last Commit](https://img.shields.io/github/last-commit/danielealbano/android-remote-control-mcp?style=flat)               |
 
 ---
 

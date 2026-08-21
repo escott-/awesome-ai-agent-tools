@@ -1,10 +1,10 @@
 {
   "name": "Tools Catalog",
-  "version": "2026.07",
+  "version": "2026.08",
   "description": "Essential CLI tools and utilities that enhance AI coding agent capabilities",
   "license": "MIT",
-  "lastUpdated": "2026-07-12",
-  "totalTools": 66,
+  "lastUpdated": "2026-08-20",
+  "totalTools": 72,
   "categories": [
     {
       "name": "Code Analysis",
@@ -28,7 +28,7 @@
     },
     {
       "name": "AI Coding CLIs",
-      "count": 10
+      "count": 11
     },
     {
       "name": "Agent Memory",
@@ -53,6 +53,10 @@
     {
       "name": "Terminal Enhancement",
       "count": 3
+    },
+    {
+      "name": "Agent Training & Eval",
+      "count": 5
     }
   ],
   "tools": [
@@ -715,6 +719,66 @@
       "stars": 4,
       "crossPlatform": true,
       "install": "pip install skills-mcp"
+    },
+    {
+      "id": "skill-recorder",
+      "name": "Skill Recorder",
+      "category": "AI Coding CLIs",
+      "description": "Microsoft desktop app that records on-screen work, reconstructs intent and steps with Copilot CLI, and emits a reusable Skill or Automation.",
+      "url": "https://github.com/microsoft/skill-recorder",
+      "stars": 3326,
+      "crossPlatform": true,
+      "install": "See latest release install.sh / install.ps1 (pinned commit)"
+    },
+    {
+      "id": "swe-smith",
+      "name": "SWE-smith",
+      "category": "Agent Training & Eval",
+      "description": "NeurIPS 2025 toolkit that turns a GitHub repo into a SWE-gym. 52k Hugging Face instances via load_dataset(\"SWE-bench/SWE-smith\").",
+      "url": "https://github.com/SWE-bench/SWE-smith",
+      "stars": 747,
+      "crossPlatform": true,
+      "install": "git clone https://github.com/SWE-bench/SWE-smith && pip install -e ."
+    },
+    {
+      "id": "swe-gym",
+      "name": "SWE-Gym",
+      "category": "Agent Training & Eval",
+      "description": "ICML 2025 open environment of 2.4K real Python SWE tasks from 11 repos for fine-tuning agents and verifiers.",
+      "url": "https://github.com/SWE-Gym/SWE-Gym",
+      "stars": 723,
+      "crossPlatform": true,
+      "install": "git clone https://github.com/SWE-Gym/SWE-Gym"
+    },
+    {
+      "id": "inspect-ai",
+      "name": "Inspect AI",
+      "category": "Agent Training & Eval",
+      "description": "UK AISI LLM eval framework with 200+ benchmarks, sandboxes, and first-class agent eval for ReAct, Claude Code, Codex CLI, and Gemini CLI.",
+      "url": "https://github.com/UKGovernmentBEIS/inspect_ai",
+      "stars": 2595,
+      "crossPlatform": true,
+      "install": "pip install inspect-ai"
+    },
+    {
+      "id": "harbor",
+      "name": "Harbor",
+      "category": "Agent Training & Eval",
+      "description": "Terminal-Bench authors' framework for evaluating agents in parallel cloud environments, generating RL rollouts, and running Terminal-Bench 2.0.",
+      "url": "https://github.com/harbor-framework/harbor",
+      "stars": 4472,
+      "crossPlatform": true,
+      "install": "uv tool install harbor / pip install harbor"
+    },
+    {
+      "id": "skyrl",
+      "name": "SkyRL",
+      "category": "Agent Training & Eval",
+      "description": "Full-stack RL library for LLMs (skyrl-train, skyrl-agent, skyrl-gym) with SWE-Bench multi-turn tool-use and Harbor terminal-use training.",
+      "url": "https://github.com/NovaSky-AI/SkyRL",
+      "stars": 2179,
+      "crossPlatform": true,
+      "install": "See https://docs.skyrl.ai/docs"
     }
   ]
 }

@@ -1,10 +1,10 @@
 {
   "name": "Plugins Catalog",
-  "version": "2026.07",
+  "version": "2026.08",
   "description": "Plugins, extensions, and rules for AI coding agents (Claude Code, OpenCode, Cursor, Copilot, Windsurf, Aider, JetBrains)",
   "license": "MIT",
-  "lastUpdated": "2026-07-13",
-  "totalPlugins": 53,
+  "lastUpdated": "2026-08-20",
+  "totalPlugins": 54,
   "categories": [
     {
       "name": "Claude Code",
@@ -40,7 +40,7 @@
     },
     {
       "name": "Cross-Tool",
-      "count": 6
+      "count": 7
     }
   ],
   "plugins": [
@@ -679,6 +679,18 @@
       "websiteUrl": "https://change8.dev",
       "installCommand": "Browse at change8.dev",
       "license": "N/A"
+    },
+    {
+      "id": "flutter-agent-plugins",
+      "name": "Flutter Agent Plugins",
+      "category": "Cross-Tool",
+      "platform": "Claude Code, Codex, Cursor",
+      "stars": 2851,
+      "installs": "10 Flutter skills + Dart/Flutter MCP",
+      "description": "Official Flutter team agent plugins bundling Flutter skills, rules, and Dart/Flutter MCP config for widget tests, layout, routing, and architecture.",
+      "websiteUrl": "https://docs.flutter.dev/ai/get-started",
+      "installCommand": "claude plugin marketplace add flutter/agent-plugins; claude plugin install dart-flutter@dart-flutter",
+      "license": "BSD-3-Clause"
     }
   ]
 }

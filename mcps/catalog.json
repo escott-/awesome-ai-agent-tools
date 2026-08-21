@@ -1,10 +1,10 @@
 {
   "name": "MCP Server Catalog",
-  "version": "2026.07",
+  "version": "2026.08",
   "description": "Curated Model Context Protocol servers for AI-assisted development",
   "license": "MIT",
-  "lastUpdated": "2026-07-18",
-  "totalServers": 130,
+  "lastUpdated": "2026-08-20",
+  "totalServers": 133,
   "categories": [
     {
       "name": "Official Reference",
@@ -40,7 +40,7 @@
     },
     {
       "name": "AI & Machine Learning",
-      "count": 12
+      "count": 13
     },
     {
       "name": "Agent Orchestration",
@@ -72,7 +72,7 @@
     },
     {
       "name": "Marketing",
-      "count": 3
+      "count": 4
     },
     {
       "name": "Data Engineering",
@@ -81,6 +81,10 @@
     {
       "name": "Blockchain",
       "count": 2
+    },
+    {
+      "name": "Mobile",
+      "count": 1
     }
   ],
   "sources": [
@@ -2401,6 +2405,57 @@
         "analytics",
         "trending",
         "NLP"
+      ]
+    },
+    {
+      "id": "inside-ads",
+      "name": "Inside Ads",
+      "category": "Marketing",
+      "github": "https://inside.ad",
+      "stars": 0,
+      "description": "Telegram ad exchange MCP: estimate reach and cost with no account, then create and run campaigns. Official registry id ad.inside/inside-ads.",
+      "install": "Remote MCP https://app.inside.ad/api/mcp (streamable HTTP)",
+      "license": "N/A",
+      "verified": true,
+      "tags": [
+        "ads",
+        "telegram",
+        "marketing",
+        "remote-mcp"
+      ]
+    },
+    {
+      "id": "actwise-ideation",
+      "name": "Actwise Ideation",
+      "category": "AI & Machine Learning",
+      "github": "https://actwise.ai/home/ideation",
+      "stars": 0,
+      "description": "Helps founders benchmark startup and product ideas before they build. Official registry id ai.actwise/ideation.",
+      "install": "Remote MCP https://actwise.ai/ideation/mcp/v1 (streamable HTTP)",
+      "license": "N/A",
+      "verified": true,
+      "tags": [
+        "ideation",
+        "startups",
+        "benchmarking",
+        "remote-mcp"
+      ]
+    },
+    {
+      "id": "android-remote-control-mcp",
+      "name": "Android Remote Control MCP",
+      "category": "Mobile",
+      "github": "https://github.com/danielealbano/android-remote-control-mcp",
+      "stars": 529,
+      "description": "On-device Android MCP server (57 tools) for UI control, screenshots, files, apps, and gestures. Install the APK, then point .mcp.json at http://DEVICE_IP:PORT/mcp.",
+      "install": "adb install android-remote-control-mcp-<version>-gms-release.apk",
+      "license": "MIT",
+      "verified": false,
+      "tags": [
+        "android",
+        "mobile",
+        "remote-control",
+        "accessibility"
       ]
     }
   ]

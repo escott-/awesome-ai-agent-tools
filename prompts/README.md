@@ -2,7 +2,7 @@
 
 Curated prompt collections and marketplaces for AI coding agents
 
-**102** entries across **17** categories.
+**103** entries across **17** categories.
 
 ## Categories
 
@@ -16,15 +16,15 @@ Curated prompt collections and marketplaces for AI coding agents
 - **DevOps** (6)
 - **Security** (6)
 - **Documentation** (6)
+- **Agent Workflows** (6)
 - **Reasoning** (5)
-- **Agent Workflows** (5)
 - **Data** (4)
 - **Design** (4)
 - **Productivity** (4)
 - **Content** (3)
 - **Marketplace** (1)
 
-## All 102 prompts
+## All 103 prompts
 
 | Name                            | Category         | Description                                                                                                                                          | Source | Badges |
 | ------------------------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | ------ |
@@ -130,6 +130,7 @@ Curated prompt collections and marketplaces for AI coding agents
 | Social Media Graphics           | Image Generation | Create social media graphics and banners                                                                                                             |        |        |
 | Awesome AI Prompts 2026         | General Purpose  | Updated prompt library for GPT-5.4, Claude Sonnet 4.6, and Gemini 3.1 models. First major prompt library updated for July 2026 model releases.       |        |        |
 | PromptHub                       | Marketplace      | Marketplace with 50,000+ prompts organized by use case and model compatibility. Largest dedicated prompt marketplace with strong discovery features. |        |        |
+| Hugging Face AI Agents Course   | Agent Workflows  | Free 2025 Hugging Face course covering agent fundamentals, smolagents, LangGraph, LlamaIndex, function-calling fine-tuning, and agent evaluation.    |        |        |
 
 ---
 

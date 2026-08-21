@@ -1,10 +1,10 @@
 {
   "name": "Prompts Catalog",
-  "version": "2026.07",
+  "version": "2026.08",
   "description": "Curated prompt collections, libraries, and marketplaces for AI coding agents",
   "license": "MIT",
-  "lastUpdated": "2026-07-16",
-  "totalPrompts": 102,
+  "lastUpdated": "2026-08-20",
+  "totalPrompts": 103,
   "categories": [
     {
       "name": "General Purpose",
@@ -68,7 +68,7 @@
     },
     {
       "name": "Agent Workflows",
-      "count": 5
+      "count": 6
     },
     {
       "name": "Marketplace",
@@ -166,6 +166,13 @@
       "name": "patricio0312rev/agentkit",
       "url": "https://github.com/patricio0312rev/agentkit",
       "description": "CLI tool scaffolding 42 pre-built agents across 7 departments."
+    },
+    {
+      "name": "huggingface/agents-course",
+      "url": "https://github.com/huggingface/agents-course",
+      "stars": 31209,
+      "promptCount": 1,
+      "description": "Official Hugging Face AI Agents Course repository."
     }
   ],
   "marketplaces": [
@@ -1510,6 +1517,19 @@
         "All models"
       ],
       "source": "prompthub.com"
+    },
+    {
+      "id": "huggingface-agents-course",
+      "name": "Hugging Face AI Agents Course",
+      "category": "Agent Workflows",
+      "description": "Free 2025 Hugging Face course covering agent fundamentals, smolagents, LangGraph, LlamaIndex, function-calling fine-tuning, and agent evaluation.",
+      "bestFor": "Learning to build, observe, and evaluate AI agents",
+      "worksWith": [
+        "smolagents",
+        "LangGraph",
+        "LlamaIndex"
+      ],
+      "source": "huggingface/agents-course"
     }
   ]
 }

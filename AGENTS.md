@@ -4,20 +4,20 @@ This file provides context for AI coding agents working with this repository.
 
 ## What Is This Repo?
 
-Awesome AI Agent Tools is the most comprehensive open-source library of AI agent components. It contains 600 installable skills, MCP servers, agent workflows, subagents, hooks, plugins, prompts, and tools curated from 100+ repositories.
+Awesome AI Agent Tools is the most comprehensive open-source library of AI agent components. It contains 633 installable skills, MCP servers, agent workflows, subagents, hooks, plugins, prompts, and tools curated from 100+ repositories.
 
 ## Repository Structure
 
 | Directory | Count | What It Contains |
 |-----------|-------|------------------|
-| skills/ | 88 | SKILL.md files -- reusable instruction sets that teach AI agents new capabilities |
-| mcps/ | 119 | Model Context Protocol server configs with install commands |
+| skills/ | 97 | SKILL.md files -- reusable instruction sets that teach AI agents new capabilities |
+| mcps/ | 133 | Model Context Protocol server configs with install commands |
 | loops/ | 115 | Agent workflow patterns with verification criteria |
-| subagents/ | 32 | Specialized agent definitions with model routing |
+| subagents/ | 34 | Specialized agent definitions with model routing |
 | hooks/ | 25 | Claude Code hooks for security, automation, and quality |
-| plugins/ | 53 | Extensions for Claude Code, OpenCode, Cursor, and 6 more platforms |
-| prompts/ | 102 | Curated prompt collections and marketplace links |
-| tools/ | 66 | CLI utilities that enhance agent capabilities |
+| plugins/ | 54 | Extensions for Claude Code, OpenCode, Cursor, and 6 more platforms |
+| prompts/ | 103 | Curated prompt collections and marketplace links |
+| tools/ | 72 | CLI utilities that enhance agent capabilities |
 
 ## Catalog Format
 

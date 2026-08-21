@@ -1,10 +1,10 @@
 {
   "name": "Subagents Catalog",
-  "version": "2026.07",
+  "version": "2026.08",
   "description": "Curated index of subagent definitions, agent harnesses, and platform-specific subagent formats",
   "license": "MIT",
-  "lastUpdated": "2026-07-13",
-  "totalSubagents": 32,
+  "lastUpdated": "2026-08-20",
+  "totalSubagents": 34,
   "categories": [
     {
       "name": "Subagent Collection",
@@ -12,7 +12,7 @@
     },
     {
       "name": "Agent Harness",
-      "count": 5
+      "count": 7
     },
     {
       "name": "Official SDK",
@@ -117,6 +117,16 @@
       "name": "jshsakura/awesome-opencode-skills",
       "url": "https://github.com/jshsakura/awesome-opencode-skills",
       "stars": 19
+    },
+    {
+      "name": "QoderAI/better-harness",
+      "url": "https://github.com/QoderAI/better-harness",
+      "stars": 1935
+    },
+    {
+      "name": "ratel-ai/ratel",
+      "url": "https://github.com/ratel-ai/ratel",
+      "stars": 425
     }
   ],
   "subagents": [
@@ -589,6 +599,38 @@
         "multi-agent",
         "nodejs",
         "framework"
+      ]
+    },
+    {
+      "id": "better-harness",
+      "name": "better-harness",
+      "category": "Agent Harness",
+      "description": "Open-source harness-engineering platform: treat the coding-agent work loop as code, inspect evidence, and generate prioritized, verifiable improvements.",
+      "stars": 1935,
+      "license": "MIT",
+      "tags": [
+        "harness",
+        "loop-engineering",
+        "claude-code",
+        "codex",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "ratel",
+      "name": "Ratel",
+      "category": "Agent Harness",
+      "description": "Context-engineering SDK that progressively discloses tools and skills with in-process BM25/semantic retrieval. TypeScript, Python, and Rust packages.",
+      "websiteUrl": "https://www.ratel.sh/",
+      "stars": 425,
+      "license": "MIT",
+      "language": "TypeScript, Python, Rust",
+      "tags": [
+        "sdk",
+        "context-engineering",
+        "skills",
+        "tool-selection",
+        "token-optimization"
       ]
     }
   ]

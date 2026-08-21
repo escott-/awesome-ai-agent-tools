@@ -1,14 +1,14 @@
 {
   "name": "Skills Catalog",
-  "version": "2026.07",
+  "version": "2026.08",
   "description": "Reusable AI agent skills following the SKILL.md standard",
   "license": "MIT",
-  "lastUpdated": "2026-07-12",
-  "totalSkills": 88,
+  "lastUpdated": "2026-08-20",
+  "totalSkills": 97,
   "categories": [
     {
       "name": "Development",
-      "count": 31
+      "count": 33
     },
     {
       "name": "Productivity",
@@ -16,15 +16,15 @@
     },
     {
       "name": "Content",
-      "count": 10
+      "count": 12
     },
     {
       "name": "Design",
-      "count": 9
+      "count": 11
     },
     {
       "name": "Testing",
-      "count": 3
+      "count": 4
     },
     {
       "name": "DevOps",
@@ -32,11 +32,11 @@
     },
     {
       "name": "Marketing",
-      "count": 5
+      "count": 6
     },
     {
       "name": "Data",
-      "count": 3
+      "count": 4
     },
     {
       "name": "Security",
@@ -84,6 +84,30 @@
       "url": "https://github.com/addyosmani/agent-skills",
       "stars": 77200,
       "skillCount": 24
+    },
+    {
+      "name": "heygen-com/hyperframes",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "stars": 41859,
+      "skillCount": 1
+    },
+    {
+      "name": "LottieFiles/motion-design-skill",
+      "url": "https://github.com/LottieFiles/motion-design-skill",
+      "stars": 1294,
+      "skillCount": 1
+    },
+    {
+      "name": "mvanhorn/last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "stars": 58820,
+      "skillCount": 1
+    },
+    {
+      "name": "Vincentwei1021/video-shotcraft",
+      "url": "https://github.com/Vincentwei1021/video-shotcraft",
+      "stars": 5716,
+      "skillCount": 1
     }
   ],
   "skills": [
@@ -1682,6 +1706,170 @@
         "encryption",
         "markdown",
         "ephemeral"
+      ]
+    },
+    {
+      "id": "cut-the-curve",
+      "name": "Cut the Curve",
+      "source": "heygen-com/hyperframes",
+      "category": "Design",
+      "installs": 40300,
+      "description": "SEAM motion-cut catalog for HyperFrames: zoom-through, waterfall, rack-focus, and in-scene arrival techniques with GSAP templates.",
+      "install": "npx skills add heygen-com/hyperframes --skill cut-the-curve",
+      "license": "Apache-2.0",
+      "verified": true,
+      "local": false,
+      "tags": [
+        "motion",
+        "video",
+        "hyperframes",
+        "gsap",
+        "animation"
+      ]
+    },
+    {
+      "id": "reddit-automation",
+      "name": "Reddit Automation",
+      "source": "doany-skills/skills",
+      "category": "Marketing",
+      "installs": 56900,
+      "description": "Find Reddit threads where people need your product and draft disclosed, helpful replies for human review before posting.",
+      "install": "npx skills add doany-skills/skills --skill reddit-automation -g",
+      "license": "MIT",
+      "verified": false,
+      "local": false,
+      "tags": [
+        "reddit",
+        "growth",
+        "marketing",
+        "community"
+      ]
+    },
+    {
+      "id": "ai-music",
+      "name": "AI Music",
+      "source": "prime-skills/runcomfy-agent-skills",
+      "category": "Content",
+      "installs": 89100,
+      "description": "Generate vocal songs, instrumentals, jingles, and multilingual covers via the RunComfy CLI with model selection from user intent.",
+      "install": "npx skills add agentspace-so/runcomfy-agent-skills --skill ai-music -g",
+      "license": "MIT",
+      "verified": false,
+      "local": false,
+      "tags": [
+        "music",
+        "audio",
+        "generation",
+        "runcomfy"
+      ]
+    },
+    {
+      "id": "motion-design",
+      "name": "Motion Design",
+      "source": "LottieFiles/motion-design-skill",
+      "category": "Design",
+      "installs": 0,
+      "description": "Universal motion-design principles for agents: timing, easing, Disney-adapted UI principles, choreography, and animation quality checks.",
+      "install": "npx skills add LottieFiles/motion-design-skill",
+      "license": "MIT",
+      "verified": true,
+      "local": false,
+      "tags": [
+        "motion",
+        "animation",
+        "lottie",
+        "ui",
+        "design"
+      ]
+    },
+    {
+      "id": "last30days-skill",
+      "name": "Last30Days Skill",
+      "source": "mvanhorn/last30days-skill",
+      "category": "Data",
+      "installs": 0,
+      "description": "Research any topic across Reddit, X, YouTube, HN, Polymarket, and the web, then synthesize a recency-scored brief. Companion skill to Last30Days MCP.",
+      "install": "npx skills add mvanhorn/last30days-skill -g",
+      "license": "MIT",
+      "verified": false,
+      "local": false,
+      "tags": [
+        "research",
+        "trends",
+        "social-media",
+        "recency"
+      ]
+    },
+    {
+      "id": "quality-md",
+      "name": "QUALITY.md",
+      "source": "qualitymd/quality.md",
+      "category": "Testing",
+      "installs": 0,
+      "description": "Open format, agent skill, and CLI for engineering quality loops: define QUALITY.md, evaluate, act, and continuously improve.",
+      "install": "npx skills add qualitymd/quality.md",
+      "license": "MIT",
+      "verified": false,
+      "local": false,
+      "tags": [
+        "quality",
+        "evaluation",
+        "loops",
+        "cli"
+      ]
+    },
+    {
+      "id": "video-shotcraft",
+      "name": "video-shotcraft",
+      "source": "Vincentwei1021/video-shotcraft",
+      "category": "Content",
+      "installs": 0,
+      "description": "Cinematic product-video skill for Claude Code and Codex: 152 shot recipes, 209 motion previews, and a Remotion production template.",
+      "install": "npx skills add Vincentwei1021/video-shotcraft",
+      "license": "Apache-2.0",
+      "verified": false,
+      "local": false,
+      "tags": [
+        "video",
+        "remotion",
+        "motion-design",
+        "product-video"
+      ]
+    },
+    {
+      "id": "book-to-skill",
+      "name": "book-to-skill",
+      "source": "Leutenegger/book-to-skill",
+      "category": "Development",
+      "installs": 0,
+      "description": "Turn a technical book, PDF, EPUB, or document folder into a structured Claude Code / Copilot skill with per-chapter files.",
+      "install": "pip install -e . && book-to-skill install",
+      "license": "MIT",
+      "verified": false,
+      "local": false,
+      "tags": [
+        "pdf",
+        "skill-generator",
+        "knowledge",
+        "claude-code"
+      ]
+    },
+    {
+      "id": "j-space-cognition-suite",
+      "name": "J-Space Cognition Suite",
+      "source": "Tiger3807861189/J-Space-Cognition-Suite-V3.6",
+      "category": "Development",
+      "installs": 0,
+      "description": "Inference-time cognitive-control skill: selective workspace loading, verification, recovery, and an optional loop controller for long-horizon work.",
+      "install": "Copy j-space/ into your skills directory so SKILL.md is at <skills>/j-space/SKILL.md",
+      "license": "Apache-2.0",
+      "verified": false,
+      "local": false,
+      "tags": [
+        "cognitive",
+        "long-horizon",
+        "verification",
+        "agent-skills"
       ]
     }
   ]

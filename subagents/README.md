@@ -2,17 +2,17 @@
 
 Specialized agent definitions with model routing
 
-**32** entries across **5** categories.
+**34** entries across **5** categories.
 
 ## Categories
 
 - **Subagent Collection** (16)
-- **Agent Harness** (5)
+- **Agent Harness** (7)
 - **Official SDK** (4)
 - **Platform Format** (4)
 - **Curated Directory** (3)
 
-## All 32 subagents
+## All 34 subagents
 
 | Name                               | Category            | Description                                                                                                                                                                            | Source | Badges |
 | ---------------------------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | ------ |
@@ -48,6 +48,8 @@ Specialized agent definitions with model routing
 | simota/agent-skills                | Subagent Collection | 124-145 specialist agent definitions covering multiple development domains. Cross-platform compatible.                                                                                 |        |        |
 | ogulcancelik/herdr                 | Agent Harness       | AI agent multiplexer for terminal. Spawn, manage, and orchestrate multiple AI agents from CLI. Terminal-native multi-agent orchestration.                                              |        |        |
 | opensquad                          | Agent Harness       | Multi-agent orchestration framework via npm. Coordinate multiple AI agents in a single workflow. npm-first approach for easy Node.js integration.                                      |        |        |
+| better-harness                     | Agent Harness       | Open-source harness-engineering platform: treat the coding-agent work loop as code, inspect evidence, and generate prioritized, verifiable improvements.                               |        |        |
+| Ratel                              | Agent Harness       | Context-engineering SDK that progressively discloses tools and skills with in-process BM25/semantic retrieval. TypeScript, Python, and Rust packages.                                  |        |        |
 
 ---
 

@@ -22,7 +22,7 @@
 
 ---
 
-**611** installable components across **8** categories. Every entry is sourced from real projects with provenance and install commands. Works with Claude Code, OpenCode, Codex, Cursor, Gemini CLI, Copilot, and 30+ AI coding assistants.
+**633** installable components across **8** categories. Every entry is sourced from real projects with provenance and install commands. Works with Claude Code, OpenCode, Codex, Cursor, Gemini CLI, Copilot, and 30+ AI coding assistants.
 
 ## Contents
 
@@ -39,14 +39,14 @@
 
 | Library | Count | Description | Folder |
 |---------|------:|-------------|--------|
-| **Skills** | 88 | Reusable AI agent skills following the SKILL.md standard | [skills/](skills/) |
-| **MCPs** | 130 | Curated Model Context Protocol servers for AI-assisted development | [mcps/](mcps/) |
+| **Skills** | 97 | Reusable AI agent skills following the SKILL.md standard | [skills/](skills/) |
+| **MCPs** | 133 | Curated Model Context Protocol servers for AI-assisted development | [mcps/](mcps/) |
 | **Agent Loops** | 115 | Repeatable AI-agent workflows with feedback loops | [loops/](loops/) |
-| **Subagents** | 32 | Specialized agent definitions with model routing | [subagents/](subagents/) |
+| **Subagents** | 34 | Specialized agent definitions with model routing | [subagents/](subagents/) |
 | **Hooks** | 25 | Production-ready Claude Code hooks for security, automation, and quality | [hooks/](hooks/) |
-| **Plugins** | 53 | Extensions for Claude Code, OpenCode, Cursor, and 6 more platforms | [plugins/](plugins/) |
-| **Prompts** | 102 | Curated prompt collections and marketplaces for AI coding agents | [prompts/](prompts/) |
-| **Tools** | 66 | Essential CLI tools and utilities that enhance AI coding agent capabilities | [tools/](tools/) |
+| **Plugins** | 54 | Extensions for Claude Code, OpenCode, Cursor, and 6 more platforms | [plugins/](plugins/) |
+| **Prompts** | 103 | Curated prompt collections and marketplaces for AI coding agents | [prompts/](prompts/) |
+| **Tools** | 72 | Essential CLI tools and utilities that enhance AI coding agent capabilities | [tools/](tools/) |
 
 All data comes from `catalog.json` files in each folder. These catalogs are the single source of truth for programmatic discovery.
 
@@ -62,23 +62,23 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) to add new entries, or give your AI agent
 
 ## Category Breakdown
 
-### Skills (88)
+### Skills (97)
 
-    - Development: 31
+    - Development: 33
     - Productivity: 17
-    - Content: 10
-    - Design: 9
+    - Content: 12
+    - Design: 11
     - DevOps: 8
-    - Marketing: 5
-    - Testing: 3
-    - Data: 3
+    - Marketing: 6
+    - Testing: 4
+    - Data: 4
     - Security: 2
 
-### MCPs (130)
+### MCPs (133)
 
     - Developer Tools: 15
     - Databases: 13
-    - AI & Machine Learning: 12
+    - AI & Machine Learning: 13
     - Search: 11
     - Communication: 10
     - DevOps: 9
@@ -89,12 +89,13 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) to add new entries, or give your AI agent
     - Cloud Platforms: 6
     - Monitoring: 6
     - Research & Data: 5
+    - Marketing: 4
     - Design: 4
     - Finance: 4
-    - Marketing: 3
     - Maps: 2
     - Blockchain: 2
     - Data Engineering: 1
+    - Mobile: 1
 
 ### Agent Loops (115)
 
@@ -106,10 +107,10 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) to add new entries, or give your AI agent
     - design: 6
     - content: 3
 
-### Subagents (32)
+### Subagents (34)
 
     - Subagent Collection: 16
-    - Agent Harness: 5
+    - Agent Harness: 7
     - Official SDK: 4
     - Platform Format: 4
     - Curated Directory: 3
@@ -125,19 +126,19 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) to add new entries, or give your AI agent
     - Notifications: 2
     - Platform Feature: 1
 
-### Plugins (53)
+### Plugins (54)
 
     - Claude Code: 9
     - OpenCode: 9
+    - Cross-Tool: 7
     - Cursor: 6
     - VS Code AI: 6
-    - Cross-Tool: 6
     - Copilot: 5
     - Windsurf: 4
     - Aider: 4
     - JetBrains: 4
 
-### Prompts (102)
+### Prompts (103)
 
     - Coding: 11
     - Code Review: 9
@@ -149,17 +150,17 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) to add new entries, or give your AI agent
     - DevOps: 6
     - Security: 6
     - Documentation: 6
+    - Agent Workflows: 6
     - Reasoning: 5
-    - Agent Workflows: 5
     - Data: 4
     - Design: 4
     - Productivity: 4
     - Content: 3
     - Marketplace: 1
 
-### Tools (66)
+### Tools (72)
 
-    - AI Coding CLIs: 10
+    - AI Coding CLIs: 11
     - Code Analysis: 9
     - Git Utilities: 6
     - Cloud & DevOps: 6
@@ -168,6 +169,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) to add new entries, or give your AI agent
     - Docker & Containers: 5
     - Database CLIs: 5
     - API Testing: 5
+    - Agent Training & Eval: 5
     - Monitoring: 4
     - Terminal Enhancement: 3
     - Agent Memory: 2
