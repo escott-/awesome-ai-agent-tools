@@ -11,7 +11,7 @@ body:
 
         Before submitting, please check:
         - [ ] The skill doesn't already exist in the [skills/](../../skills/) directory
-        - [ ] The skill follows the format in [CONTRIBUTING.md](../../CONTRIBUTING.md#adding-a-skill)
+        - [ ] The skill follows the format in [contributing.md](../../contributing.md)
 
   - type: input
     id: skill-name
@@ -38,14 +38,14 @@ body:
       description: What domain does this skill cover?
       options:
         - Development (TDD, debugging, code review, git)
-        - Planning (requirements, architecture, task breakdown)
-        - Writing (documentation, emails, marketing)
-        - Security (auditing, hardening, vulnerabilities)
+        - Productivity (workflows, automation, planning)
+        - Content (documentation, writing, marketing)
         - Design (UI/UX, prototyping, design systems)
-        - Data (analysis, visualization, ETL)
         - DevOps (CI/CD, infrastructure, deployment)
-        - Multimedia (image, video, audio)
-        - Other
+        - Testing (test generation, coverage, QA)
+        - Marketing (SEO, campaigns, copywriting)
+        - Data (analysis, visualization, ETL)
+        - Security (auditing, hardening, vulnerabilities)
     validations:
       required: true
 
@@ -97,7 +97,7 @@ body:
       label: Contributor Checklist
       description: Confirm you've completed these steps
       options:
-        - label: I have read the [contributing guide](../../CONTRIBUTING.md)
+        - label: I have read the [contributing guide](../../contributing.md)
           required: true
         - label: This skill follows the SKILL.md format
           required: true

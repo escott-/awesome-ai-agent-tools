@@ -39,14 +39,25 @@ body:
       label: Category
       description: What type of MCP server is this?
       options:
-        - General Purpose (broad capabilities)
-        - Development (code, debugging, testing)
-        - Database (SQL, NoSQL, data access)
+        - Developer Tools (code, debugging, testing)
+        - Official Reference (first-party protocol examples)
+        - Browser Automation (puppeteer, playwright, scraping)
+        - Databases (SQL, NoSQL, data access)
+        - AI & Machine Learning (models, inference, embeddings)
+        - Agent Orchestration (multi-agent, workflows)
+        - Cloud Platforms (AWS, GCP, Azure)
+        - DevOps (CI/CD, infrastructure, monitoring)
         - Search (web search, documentation)
-        - Project Management (issues, boards, tracking)
         - Communication (chat, email, notifications)
-        - Cloud (AWS, GCP, Azure)
+        - Marketing (SEO, social, campaigns)
         - Security (auth, secrets, vulnerabilities)
+        - Monitoring (observability, logging, alerts)
+        - Research & Data (analysis, datasets)
+        - Design (UI/UX, assets)
+        - Finance (payments, crypto, market data)
+        - Maps (geocoding, location)
+        - Mobile (iOS, Android)
+        - Blockchain (web3, smart contracts)
         - Other
     validations:
       required: true
@@ -138,7 +149,7 @@ body:
       label: Contributor Checklist
       description: Confirm you've completed these steps
       options:
-        - label: I have read the [contributing guide](../../CONTRIBUTING.md)
+        - label: I have read the [contributing guide](../../contributing.md)
           required: true
         - label: This MCP server has a working GitHub repository
           required: true

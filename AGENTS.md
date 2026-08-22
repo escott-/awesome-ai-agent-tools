@@ -45,7 +45,7 @@ Each directory contains a `catalog.json` file with structured metadata:
 3. Ensure JSON is valid: `cat skills/catalog.json | python3 -m json.tool`
 4. Submit a PR
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for full details. Or give your AI agent the [contribution skill](CONTRIBUTE.md) and it will do it automatically.
+See [contributing.md](contributing.md) for full details. Or give your AI agent the [contribution skill](CONTRIBUTE.md) and it will do it automatically.
 
 ## Standards
 
@@ -55,9 +55,9 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for full details. Or give your AI agent t
 
 ## Key Files
 
-- `README.md` -- Main overview and catalog
+- `readme.md` -- Main overview and catalog
 - `llms.txt` -- Optimized for AI agent consumption
-- `CONTRIBUTING.md` -- Human contribution guide
+- `contributing.md` -- Human contribution guide
 - `CONTRIBUTE.md` -- Agent contribution skill
 - `skills/catalog.json` -- Machine-readable skills catalog
 - `mcps/catalog.json` -- Machine-readable MCP catalog

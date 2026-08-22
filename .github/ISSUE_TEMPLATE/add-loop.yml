@@ -11,7 +11,7 @@ body:
 
         Before submitting, please check:
         - [ ] The loop doesn't already exist in [loops/](../../loops/)
-        - [ ] The loop follows the format in [CONTRIBUTING.md](../../CONTRIBUTING.md#adding-a-loop)
+        - [ ] The loop follows the format in [contributing.md](../../contributing.md)
 
   - type: input
     id: loop-name
@@ -37,11 +37,13 @@ body:
       label: Category
       description: What domain does this loop cover?
       options:
-        - Engineering (code quality, testing, performance, cleanup)
-        - Content (writing, documentation, marketing)
-        - Evaluation (analysis, benchmarking, assessment)
-        - Operations (deployment, monitoring, incident response)
-        - Design (UI/UX, prototyping, iteration)
+        - engineering (code quality, testing, performance, cleanup)
+        - evaluation (analysis, benchmarking, assessment)
+        - operations (deployment, monitoring, incident response)
+        - content (writing, documentation, marketing)
+        - design (UI/UX, prototyping, iteration)
+        - meta (loops about loops, agent self-improvement)
+        - multi-agent (orchestration across several agents)
     validations:
       required: true
 
@@ -104,7 +106,7 @@ body:
       label: Contributor Checklist
       description: Confirm you've completed these steps
       options:
-        - label: I have read the [contributing guide](../../CONTRIBUTING.md)
+        - label: I have read the [contributing guide](../../contributing.md)
           required: true
         - label: This loop has clear verification criteria
           required: true

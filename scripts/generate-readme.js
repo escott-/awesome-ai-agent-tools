@@ -7,6 +7,42 @@ const ROOT = path.resolve(__dirname, '..');
 const REPO = 'michielhdoteth/awesome-ai-agent-tools';
 const REPO_URL = `https://github.com/${REPO}`;
 
+// Extract an owner/repo slug from any catalog entry, handling every URL
+// field naming convention used across the 8 catalogs:
+//   skills/prompts/hooks -> source ("owner/repo")
+//   mcps                 -> github ("https://github.com/owner/repo")
+//   loops                -> sourceRepo ("owner/repo")
+//   tools                -> url ("https://github.com/owner/repo")
+//   plugins              -> websiteUrl (only when it points at github.com)
+const SLUG_RE = /^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/;
+const GH_URL_RE = /github\.com\/([A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+)/;
+
+function repoOf(e) {
+  const slugFields = ['source', 'sourceRepo', 'repo'];
+  for (const f of slugFields) {
+    const v = e[f];
+    if (typeof v === 'string' && SLUG_RE.test(v.trim())) return v.trim();
+  }
+  const urlFields = ['github', 'githubUrl', 'url', 'sourceUrl', 'repository'];
+  for (const f of urlFields) {
+    const v = e[f];
+    if (typeof v === 'string') {
+      const m = v.match(GH_URL_RE);
+      if (m) return m[1];
+    }
+  }
+  // websiteUrl only counts when it actually links to a GitHub repo
+  if (typeof e.websiteUrl === 'string') {
+    const m = e.websiteUrl.match(GH_URL_RE);
+    if (m) return m[1];
+  }
+  return '';
+}
+
+function displayName(e) {
+  return e.title || e.name || e.id || '';
+}
+
 const CATALOGS = [
   {
     file: 'skills/catalog.json',
@@ -16,8 +52,6 @@ const CATALOGS = [
     desc: 'Reusable AI agent skills following the SKILL.md standard',
     folder: 'skills',
     plural: 'skills',
-    source: (e) => (e.source && e.source.includes('/') ? `[${e.source}](https://github.com/${e.source})` : ''),
-    repo: (e) => (e.source && e.source.includes('/') ? e.source : ''),
   },
   {
     file: 'mcps/catalog.json',
@@ -27,16 +61,6 @@ const CATALOGS = [
     desc: 'Curated Model Context Protocol servers for AI-assisted development',
     folder: 'mcps',
     plural: 'mcps',
-    source: (e) => {
-      if (!e.github) return '';
-      const m = e.github.match(/github\.com\/([^/]+\/[^/]+)/);
-      return m ? `[${m[1]}](${e.github})` : '';
-    },
-    repo: (e) => {
-      if (!e.github) return '';
-      const m = e.github.match(/github\.com\/([^/]+\/[^/]+)/);
-      return m ? m[1] : '';
-    },
   },
   {
     file: 'loops/catalog.json',
@@ -46,8 +70,6 @@ const CATALOGS = [
     desc: 'Repeatable AI-agent workflows with feedback loops',
     folder: 'loops',
     plural: 'loops',
-    source: () => '',
-    repo: () => '',
   },
   {
     file: 'subagents/catalog.json',
@@ -57,8 +79,6 @@ const CATALOGS = [
     desc: 'Specialized agent definitions with model routing',
     folder: 'subagents',
     plural: 'subagents',
-    source: () => '',
-    repo: () => '',
   },
   {
     file: 'hooks/catalog.json',
@@ -68,8 +88,6 @@ const CATALOGS = [
     desc: 'Production-ready Claude Code hooks for security, automation, and quality',
     folder: 'hooks',
     plural: 'hooks',
-    source: () => '',
-    repo: () => '',
   },
   {
     file: 'plugins/catalog.json',
@@ -79,8 +97,6 @@ const CATALOGS = [
     desc: 'Extensions for Claude Code, OpenCode, Cursor, and 6 more platforms',
     folder: 'plugins',
     plural: 'plugins',
-    source: () => '',
-    repo: () => '',
   },
   {
     file: 'prompts/catalog.json',
@@ -90,8 +106,6 @@ const CATALOGS = [
     desc: 'Curated prompt collections and marketplaces for AI coding agents',
     folder: 'prompts',
     plural: 'prompts',
-    source: () => '',
-    repo: () => '',
   },
   {
     file: 'tools/catalog.json',
@@ -101,16 +115,6 @@ const CATALOGS = [
     desc: 'Essential CLI tools and utilities that enhance AI coding agent capabilities',
     folder: 'tools',
     plural: 'tools',
-    source: (e) => {
-      if (!e.url) return '';
-      const m = e.url.match(/github\.com\/([^/]+\/[^/]+)/);
-      return m ? `[${m[1]}](${e.url})` : '';
-    },
-    repo: (e) => {
-      if (!e.url) return '';
-      const m = e.url.match(/github\.com\/([^/]+\/[^/]+)/);
-      return m ? m[1] : '';
-    },
   },
 ];
 
@@ -143,31 +147,30 @@ function padCell(content, width) {
   return ` ${content.padEnd(width)} `;
 }
 
-function buildTable(items, cat) {
-  const headers = ['Name', 'Category', 'Description', 'Source', 'Badges'];
-  const rows = items.map((e) => [
-    e.name || e.id || '',
-    e.category || '',
-    e.description || '',
-    cat.source(e),
-    badges(cat.repo(e)),
-  ]);
-
+// Build a pipe-aligned markdown table (required by remark-lint:awesome rules)
+function mdTable(headers, rows) {
   const widths = headers.map((h, i) => {
     let w = h.length;
     for (const r of rows) {
-      if (r[i].length > w) w = r[i].length;
+      if (String(r[i]).length > w) w = String(r[i]).length;
     }
     return w;
   });
+  const fmtRow = (cells) => `|${cells.map((c, i) => padCell(String(c), widths[i])).join('|')}|`;
+  const sep = `|${widths.map((w) => ` ${'-'.repeat(w)} `).join('|')}|`;
+  return [fmtRow(headers), sep, ...rows.map(fmtRow)].join('\n');
+}
 
-  const lines = [];
-  lines.push('|' + headers.map((h, i) => padCell(h, widths[i])).join('|') + '|');
-  lines.push('|' + widths.map((w) => ` ${'-'.repeat(w)} `).join('|') + '|');
-  for (const r of rows) {
-    lines.push('|' + r.map((c, i) => padCell(c, widths[i])).join('|') + '|');
-  }
-  return lines.join('\n');
+function buildTable(items, cat) {
+  const headers = ['Name', 'Category', 'Description', 'Source', 'Badges'];
+  const rows = items.map((e) => [
+    displayName(e),
+    e.category || '',
+    e.description || '',
+    (() => { const r = repoOf(e); return r ? `[${r}](https://github.com/${r})` : ''; })(),
+    badges(repoOf(e)),
+  ]);
+  return mdTable(headers, rows);
 }
 
 function generateFolderReadme(cat, data) {
@@ -224,7 +227,7 @@ Awesome AI Agent Tools is the largest open-source collection of installable comp
 
 The library covers the full AI agent stack: skills (SKILL.md files), MCP servers, agent workflow loops, subagent definitions, hooks, plugins, prompts, and CLI tools. Each category includes a JSON catalog for programmatic discovery and a human-readable directory. Components are tagged by platform, category, and source.
 
-Built for interoperability, this collection works with Claude Code, OpenCode, Codex, KiloCode, Cursor, Gemini CLI, Copilot, Aider, Windsurf, and every major AI coding assistant. Contributions are welcome -- see CONTRIBUTING.md.
+Built for interoperability, this collection works with Claude Code, OpenCode, Codex, KiloCode, Cursor, Gemini CLI, Copilot, Aider, Windsurf, and every major AI coding assistant. Contributions are welcome -- see contributing.md.
 
 ## What This Repo Contains
 
@@ -257,8 +260,8 @@ https://awesome-ai-agent-tools.vercel.app
 
 ## Key Files
 
-- [README](README.md) - Project overview, quick start, and full catalog
-- [CONTRIBUTING.md](CONTRIBUTING.md) - How to add skills, MCPs, or loops
+- [README](readme.md) - Project overview, quick start, and full catalog
+- [contributing.md](contributing.md) - How to add skills, MCPs, or loops
 - [CONTRIBUTE.md](CONTRIBUTE.md) - Agent-automatable contribution skill
 - [Skills Library](skills/) - ${skills.count} SKILL.md files across ${skills.categories.length} categories
 - [MCP Servers](mcps/) - ${mcps.count} MCP servers with install commands
@@ -296,16 +299,26 @@ function generateReadme() {
   }
   generateLlmstxt(catalogs);
 
-  // Build TOC
-  const toc = catalogs.map((c) => `- [${c.name}](#${c.name.toLowerCase().replace(/\s+/g, '-')})`).join('\n');
+  // Build TOC — anchors must match the "## Name" headings below exactly.
+  // Contributing stays out per awesome-list convention (lint exempts it);
+  // every other h2 must be listed or remark-lint:awesome-toc fails.
+  const toc = catalogs
+    .map((c) => `- [${c.name}](#${c.name.toLowerCase().replace(/\s+/g, '-')})`)
+    .concat([
+      '- [Quick Stats](#quick-stats)',
+      '- [What Makes This Different](#what-makes-this-different)',
+      '- [Star History](#star-history)',
+    ])
+    .join('\n');
 
-  // Build category detail sections
+  // Category sections sit directly after Contents so each ToC item matches
+  // its heading in document order (remark-lint:awesome-toc)
   const categoryDetails = catalogs.map((c) => {
     const catLines = c.categories
       .sort((a, b) => b.count - a.count)
-      .map((cat) => `    - ${cat.name}: ${cat.count}`)
+      .map((cat) => `- ${cat.name}: ${cat.count}`)
       .join('\n');
-    return `### ${c.name} (${c.count})\n\n${catLines}`;
+    return `## ${c.name}\n\n${catLines}`;
   }).join('\n\n');
 
   const readme = `<div align="center">
@@ -318,7 +331,7 @@ function generateReadme() {
 [![GitHub Stars](https://img.shields.io/github/stars/${REPO}?style=flat-square&label=Stars&color=gold)](${REPO_URL}/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/${REPO}?style=flat-square&label=Forks&color=blue)](${REPO_URL}/forks)
 [![Last Commit](https://img.shields.io/github/last-commit/${REPO}?style=flat-square)](${REPO_URL})
-[![License](https://img.shields.io/github/license/${REPO}?style=flat-square)](${REPO_URL}/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/${REPO}?style=flat-square)](${REPO_URL}/blob/main/license)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat-square)](${REPO_URL}/pulls)
 
 [![SKILL.md Standard](https://img.shields.io/badge/Standard-SKILL.md-blue?style=flat-square)](https://agentskills.io)
@@ -338,35 +351,29 @@ function generateReadme() {
 
 ${toc}
 
+${categoryDetails}
+
 ## Quick Stats
 
-| Library | Count | Description | Folder |
-|---------|------:|-------------|--------|
-${catalogs.map((c) => `| **${c.name}** | ${c.count} | ${c.desc} | [${c.folder}/](${c.folder}/) |`).join('\n')}
+${mdTable(['Library', 'Count', 'Description', 'Folder'], catalogs.map((c) => [`**${c.name}**`, String(c.count), c.desc, `[${c.folder}/](${c.folder}/)`]))}
 
-All data comes from \`catalog.json\` files in each folder. These catalogs are the single source of truth for programmatic discovery.
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) to add new entries, or give your AI agent the [CONTRIBUTE.md](CONTRIBUTE.md) skill and it will do it automatically.
+All data comes from \`catalog.json\` files in each folder. These catalogs are the single source of truth for programmatic discovery. Contributions welcome -- see Contributing below.
 
 ## What Makes This Different
 
-- **Not just links** -- every entry has install commands, star counts, and verified metadata
-- **Machine-readable catalogs** -- query components programmatically via \`catalog.json\` files
-- **Agent-contributable** -- your AI agent can fork, add entries, validate JSON, and submit PRs automatically
-- **Cross-platform** -- works with 30+ AI coding assistants, not locked to one vendor
-- **SKILL.md standard** -- skills follow the open [agentskills.io](https://agentskills.io) specification
-
-## Category Breakdown
-
-${categoryDetails}
+- Not just links -- every entry has install commands, star counts, and verified metadata
+- Machine-readable catalogs -- query components programmatically via \`catalog.json\` files
+- Agent-contributable -- your AI agent can fork, add entries, validate JSON, and submit PRs automatically
+- Cross-platform -- works with 30+ AI coding assistants, not locked to one vendor
+- Skills follow the open SKILL.md standard (agentskills.io)
 
 ## Contributing
 
 We welcome contributions! You can:
 
-1. **Manual PR** -- Fork, add entry to \`catalog.json\`, validate, and submit. See [CONTRIBUTING.md](CONTRIBUTING.md).
-2. **Agent-automated** -- Give your AI agent the [CONTRIBUTE.md](CONTRIBUTE.md) skill and it handles everything.
-3. **Open an issue** -- Suggest a tool we should add.
+1. Manual PR -- fork, add an entry to a \`catalog.json\` file, validate, and submit. See [contributing.md](contributing.md).
+2. Agent-automated -- give your AI agent the [CONTRIBUTE.md](CONTRIBUTE.md) skill and it handles everything.
+3. Open an issue -- suggest a tool we should add.
 
 ## Star History
 
@@ -379,9 +386,9 @@ We welcome contributions! You can:
 </a>
 `;
 
-  const readmePath = path.join(ROOT, 'README.md');
+  const readmePath = path.join(ROOT, 'readme.md');
   fs.writeFileSync(readmePath, readme, 'utf8');
-  console.log(`Generated root README + ${catalogs.length} folder READMEs + llms.txt (${totalCount} total components)`);
+  console.log(`Generated root readme + ${catalogs.length} folder READMEs + llms.txt (${totalCount} total components)`);
 }
 
 generateReadme();

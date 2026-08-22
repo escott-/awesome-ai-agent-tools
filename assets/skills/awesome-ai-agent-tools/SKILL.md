@@ -194,7 +194,7 @@ For programmatic discovery, use the JSON catalogs:
 
 ## Contributing
 
-To add resources to this collection, see [CONTRIBUTING.md](https://github.com/michielhdoteth/awesome-ai-agent-tools/blob/main/CONTRIBUTING.md).
+To add resources to this collection, see [contributing.md](https://github.com/michielhdoteth/awesome-ai-agent-tools/blob/main/contributing.md).
 
 ## Rules
 

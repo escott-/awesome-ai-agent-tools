@@ -23,10 +23,10 @@ This repo uses automated README generation so counts are never stale:
 1. **You edit** `*/catalog.json` (add/update/remove entries)
 2. **PR validation** runs `scripts/validate-catalogs.js` to catch errors
 3. **On merge to main** GitHub Actions runs `scripts/generate-readme.js`
-4. **README.md is regenerated** with accurate counts from the catalogs
+4. **readme.md is regenerated** with accurate counts from the catalogs
 5. **Weekly** star counts are updated from the GitHub API
 
-**You never need to edit README.md manually.** Just update the catalog.json files.
+**You never need to edit readme.md manually.** Just update the catalog.json files.
 
 ## Manual Contributions
 
@@ -45,33 +45,39 @@ This repo uses automated README generation so counts are never stale:
 
 ### Entry Format
 
-Each catalog entry must include:
+Each catalog has its own schema. **The most reliable approach: copy an existing entry from the target `catalog.json` and modify it.**
+
+Universal required fields (validated on every PR):
 
 ```json
 {
   "id": "unique-kebab-case-id",
   "name": "Human Readable Name",
   "category": "Category Name",
-  "description": "One-line description of what this does",
-  "githubUrl": "https://github.com/owner/repo",
-  "installCommand": "npx skills add owner/repo",
-  "stars": 12345,
-  "tags": ["tag1", "tag2"],
-  "source": "github",
-  "sourceType": "official",
-  "lastUpdated": "2026-06-28"
+  "description": "One-line description of what this does"
 }
 ```
+
+Per-catalog link fields:
+
+| Catalog | Link field(s) | Format |
+|---------|--------------|--------|
+| skills | `source` | `"owner/repo"` |
+| mcps | `github` | `"https://github.com/owner/repo"` |
+| loops | `sourceRepo`, `source`, `author` | `"owner/repo"`, URL, author name |
+| subagents | *(none -- stars/tags/license)* | |
+| hooks | `source`, `sourceType` | `"github"`, `"official"` / `"community"` / `"registry"` |
+| plugins | `websiteUrl`, `installCommand` | URL + platform install command |
+| prompts | `source` | `"owner/repo"` |
+| tools | `url`, `installCommand` | `"https://github.com/owner/repo"` |
 
 ### Required Fields
 
 - `id` -- Unique kebab-case identifier (no duplicates)
-- `name` -- Human-readable name
-- `category` -- Must match an existing category in the catalog
+- `name` or `title` -- Human-readable name (loops use `title`)
+- `category` -- Must match an existing category in the target catalog
 - `description` -- Clear, concise one-liner
-- `githubUrl` -- Link to the source repository
-- `source` -- Where you found it: `github`, `reddit`, `blog`, `official-docs`
-- `sourceType` -- `official` (company repo), `community` (individual), `registry` (marketplace)
+- The link field(s) for your catalog (see table above)
 
 ### Adding a New Category
 
@@ -117,7 +123,7 @@ node scripts/validate-catalogs.js
 
 ## What NOT to Edit
 
-- **README.md** -- Auto-generated from catalog.json files
+- **readme.md** -- Auto-generated from catalog.json files
 - **AGENTS.md** -- Only maintainers update this
 
 ## Code of Conduct
