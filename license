@@ -1,154 +1,40 @@
-Creative Commons Legal Code
+CC0 1.0 Universal
 
-CC0 1.0 UNIVERSAL
+Statement of Purpose
 
-To the extent possible under law, michielhdoteth has waived all copyright and
-related or neighboring rights to Awesome AI Agent Tools.
+The laws of most jurisdictions throughout the world automatically confer exclusive Copyright and Related Rights (defined below) upon the creator and subsequent owner(s) (each and all, an "owner") of an original work of authorship and/or a database (each, a "Work").
 
-This work is published from: United States.
+Certain owners wish to permanently relinquish those rights to a Work for the purpose of contributing to a commons of creative, cultural and scientific works ("Commons") that the public can reliably and without fear of later claims of infringement build upon, modify, incorporate in other works, reuse and redistribute as freely as possible in any form whatsoever and for any purposes, including without limitation commercial purposes. These owners may contribute to the Commons to promote the ideal of a free culture and the further production of creative, cultural and scientific works, or to gain reputation or greater distribution for their Work in part through the use and efforts of others.
 
-CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE LEGAL
-SERVICES. DISTRIBUTION OF THIS WORK DOES NOT CREATE AN ATTORNEY-CLIENT
-RELATIONSHIP. CREATIVE COMMONS PROVIDES THIS INFORMATION ON AN "AS-IS" BASIS.
-CREATIVE COMMONS MAKES NO WARRANTIES REGARDING THE INFORMATION PROVIDED, AND
-DISCLAIMS LIABILITY FOR DAMAGES RESULTING FROM ITS USE.
+For these and/or other purposes and motivations, and without any expectation of additional consideration or compensation, the person associating CC0 with a Work (the "Affirmer"), to the extent that he or she is an owner of Copyright and Related Rights in the Work, voluntarily elects to apply CC0 to the Work and publicly distribute the Work under its terms, with knowledge of his or her Copyright and Related Rights in the Work and the meaning and intended legal effect of CC0 on those rights.
 
-License
+Copyright and Related Rights. A Work made available under CC0 may be protected by copyright and related or neighboring rights ("Copyright and Related Rights"). Copyright and Related Rights include, but are not limited to, the following:
+i. the right to reproduce, adapt, distribute, perform, display, communicate, and translate a Work;
 
-THE WORK (AS DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS CREATIVE
-COMMONS PUBLIC LICENSE ("CCPL" OR "LICENSE"). THE WORK IS PROTECTED BY
-COPYRIGHT AND/OR OTHER APPLICABLE LAW. ANY USE OF THE WORK OTHER THAN AS
-AUTHORIZED UNDER THIS LICENSE OR COPYRIGHT LAW IS PROHIBITED.
+ii. moral rights retained by the original author(s) and/or performer(s);
 
-BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED HERE, YOU ACCEPT AND AGREE TO
-BE BOUND BY THE TERMS OF THIS LICENSE. TO THE EXTENT THIS LICENSE MAY BE
-CONSIDERED TO BE A CONTRACT, THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED
-HERE IN CONSIDERATION OF YOUR ACCEPTANCE OF SUCH TERMS AND CONDITIONS.
+iii. publicity and privacy rights pertaining to a person's image or likeness depicted in a Work;
 
-1. Definitions
+iv. rights protecting against unfair competition in regards to a Work, subject to the limitations in paragraph 4(a), below;
 
-a. "Collective Work" means a work, such as a periodical issue, anthology or
-encyclopedia, in which the Work in its entirety in unmodified form, along
-with one or more other contributions, constituting separate and independent
-works in themselves, are assembled into a collective whole. For the purpose
-of this License, a work which constitutes a Collective Work will not be
-considered a Derivative Work (as defined below) for the purposes of this
-License.
+v. rights protecting the extraction, dissemination, use and reuse of data in a Work;
 
-b. "Derivative Work" means a work based upon the Work or upon the Work and
-other pre-existing works, such as a translation, musical arrangement,
-dramatization, fictionalization, motion picture version, sound recording,
-art reproduction, abridgment, condensation, or any other form in which the
-Work may be recast, transformed, or adapted.
+vi. database rights (such as those arising under Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, and under any national implementation thereof, including any amended or successor version of such directive); and
 
-c. "Licensor" means the individual, individuals, entity or entities that
-offer the Work under the terms of this License.
+vii. other similar, equivalent or corresponding rights throughout the world based on applicable law or treaty, and any national implementations thereof.
 
-d. "Original Author" means the individual, individuals, entity or entities
-who created the Work.
+Waiver. To the greatest extent permitted by, but not in contravention of, applicable law, Affirmer hereby overtly, fully, permanently, irrevocably and unconditionally waives, abandons, and surrenders all of Affirmer's Copyright and Related Rights and associated claims and causes of action, whether now known or unknown (including existing as well as future claims and causes of action), in the Work (i) in all territories worldwide, (ii) for the maximum duration provided by applicable law or treaty (including future time extensions), (iii) in any current or future medium and for any number of copies, and (iv) for any purpose whatsoever, including without limitation commercial, advertising or promotional purposes (the "Waiver"). Affirmer makes the Waiver for the benefit of each member of the public at large and to the detriment of Affirmer's heirs and successors, fully intending that such Waiver shall not be subject to revocation, rescission, cancellation, termination, or any other legal or equitable action to disrupt the quiet enjoyment of the Work by the public as contemplated by Affirmer's express Statement of Purpose.
 
-e. "Work" means the copyrightable work of authorship offered under the terms
-of this License.
+Public License Fallback. Should any part of the Waiver for any reason be judged legally invalid or ineffective under applicable law, then the Waiver shall be preserved to the maximum extent permitted taking into account Affirmer's express Statement of Purpose. In addition, to the extent the Waiver is so judged Affirmer hereby grants to each affected person a royalty-free, non transferable, non sublicensable, non exclusive, irrevocable and unconditional license to exercise Affirmer's Copyright and Related Rights in the Work (i) in all territories worldwide, (ii) for the maximum duration provided by applicable law or treaty (including future time extensions), (iii) in any current or future medium and for any number of copies, and (iv) for any purpose whatsoever, including without limitation commercial, advertising or promotional purposes (the "License"). The License shall be deemed effective as of the date CC0 was applied by Affirmer to the Work. Should any part of the License for any reason be judged legally invalid or ineffective under applicable law, such partial invalidity or ineffectiveness shall not invalidate the remainder of the License, and in such case Affirmer hereby affirms that he or she will not (i) exercise any of his or her remaining Copyright and Related Rights in the Work or (ii) assert any associated claims and causes of action with respect to the Work, in either case contrary to Affirmer's express Statement of Purpose.
 
-f. "You" means an individual or entity exercising rights under this License
-who has not previously violated the terms of this License with respect to
-the Work, or who has received express permission from the Licensor to
-exercise rights under this License despite a previous violation.
+Limitations and Disclaimers.
 
-2. Fair Use Rights
+a. No trademark or patent rights held by Affirmer are waived, abandoned, surrendered, licensed or otherwise affected by this document.
 
-Nothing in this license is intended to reduce, limit, or restrict any uses
-free from copyright or rights arising from limitations or exceptions that
-are provided for in connection with the copyright protection under copyright
-law or other applicable laws.
+b. Affirmer offers the Work as-is and makes no representations or warranties of any kind concerning the Work, express, implied, statutory or otherwise, including without limitation warranties of title, merchantability, fitness for a particular purpose, non infringement, or the absence of latent or other defects, accuracy, or the present or absence of errors, whether or not discoverable, all to the greatest extent permissible under applicable law.
 
-3. License Grant
+c. Affirmer disclaims responsibility for clearing rights of other persons that may apply to the Work or any use thereof, including without limitation any person's Copyright and Related Rights in the Work. Further, Affirmer disclaims responsibility for obtaining any necessary consents, permissions or other rights required for any use of the Work.
 
-Subject to the terms and conditions of this License, Licensor hereby grants
-You a worldwide, royalty-free, non-exclusive, perpetual (for the duration of
-the applicable copyright) license to exercise the rights in the Work as
-stated below:
+d. Affirmer understands and acknowledges that Creative Commons is not a party to this document and has no duty or obligation with respect to this CC0 or use of the Work.
 
-a. to reproduce the Work, to incorporate the Work into one or more
-Collective Works, and to reproduce the Work as incorporated in the
-Collective Works;
-
-b. to create and reproduce Derivative Works;
-
-c. to distribute copies or phonorecords of, display publicly, perform
-publicly, and perform publicly by means of a digital audio transmission the
-Work including as incorporated in Collective Works.
-
-The above rights may be exercised in all media and formats whether now known
-or hereafter devised. The above rights include the right to make such
-modifications as are technically necessary to exercise them in other media
-and formats, but otherwise you have no rights to make Derivative Works.
-All rights not expressly granted by Licensor are hereby reserved.
-
-4. Waiver of Certain Rights
-
-If, by operation of law or otherwise, any of the rights granted above prove
-to be unavailable to You, then, unless You have received express permission
-from the Licensor to exercise rights under this License despite such legal
-obstacle, Licensor waives the legal cost of enforcing any exclusive rights
-in the Work against You to the extent necessary to permit You to exercise
-such rights.
-
-5. Representations, Warranties and Disclaimer
-
-UNLESS OTHERWISE MUTUALLY AGREED BY THE PARTIES IN WRITING, LICENSOR OFFERS
-THE WORK AS-IS AND MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND
-CONCERNING THE WORK, EXPRESS, IMPLIED, STATUTORY OR OTHERWISE, INCLUDING,
-WITHOUT LIMITATION, WARRANTIES OF TITLE, MERCHANTIBILITY, FITNESS FOR A
-PARTICULAR PURPOSE, NONINFRINGEMENT, OR THE ABSENCE OF LATENT OR OTHER
-DEFECTS, ACCURACY, OR THE PRESENCE OF ABSENCE OF ERRORS, WHETHER OR NOT
-DISCOVERABLE.
-
-6. Limitation on Liability
-
-EXCEPT TO THE EXTENT REQUIRED BY APPLICABLE LAW, IN NO EVENT WILL LICENSOR
-BE LIABLE TO YOU ON ANY LEGAL THEORY FOR ANY SPECIAL, INCIDENTAL,
-CONSEQUENTIAL, PUNITIVE OR EXEMPLARY DAMAGES ARISING OUT OF THIS LICENSE OR
-THE USE OF THE WORK, EVEN IF LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF
-SUCH DAMAGES.
-
-7. Termination
-
-a. This License and the rights granted hereunder will terminate
-automatically upon any breach by You of the terms of this License.
-Individuals or entities who have received Collective Works from You under
-this License, however, will not have their licenses terminated provided such
-individuals or entities remain in full compliance with those licenses.
-
-b. Subject to the above terms and conditions, the license granted here is
-perpetual (for the duration of the applicable copyright in the Work).
-Notwithstanding the above, Licensor reserves the right to release the Work
-under different license terms or to stop distributing the Work at any time;
-provided, however that any such election will not serve to withdraw this
-License (or any other license that has been, or is required to be, granted
-under the terms of this License), and this License will continue in full
-force and effect unless terminated as stated above.
-
-8. Miscellaneous
-
-a. Each time You distribute the Work, the Licensor offers to the recipient
-a license to the Work on the same terms and conditions as the license
-granted to You under this License.
-
-b. If any provision of this License is invalid or unenforceable under
-applicable law, it shall not affect the validity or enforceability of the
-remainder of the terms of this License, and without further action by the
-parties to this agreement, such provision shall be reformed to the minimum
-extent necessary to make such provision valid and enforceable.
-
-c. No term or provision of this License shall be deemed waived and no breach
-consented to unless such waiver or consent shall be in writing and signed by
-the party to be charged with such waiver or consent.
-
-d. This License constitutes the entire agreement between the parties with
-respect to the Work licensed here. There are no understandings, agreements
-or representations with respect to the Work not specified here. Licensor
-shall not be bound by any additional provisions that may appear in any
-communication from You.
-
-Creative Commons may be contacted at https://creativecommons.org/.
+For more information, please see https://creativecommons.org/publicdomain/zero/1.0
