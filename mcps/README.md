@@ -2,7 +2,7 @@
 
 Curated Model Context Protocol servers for AI-assisted development
 
-**133** entries across **20** categories.
+**134** entries across **20** categories.
 
 ## Categories
 
@@ -22,12 +22,12 @@ Curated Model Context Protocol servers for AI-assisted development
 - **Marketing** (4)
 - **Design** (4)
 - **Finance** (4)
+- **Blockchain** (3)
 - **Maps** (2)
-- **Blockchain** (2)
 - **Data Engineering** (1)
 - **Mobile** (1)
 
-## All 133 mcps
+## All 134 mcps
 
 | Name                              | Category              | Description                                                                                                                                                                                                                                                                         | Source                                                                                                                | Badges                                                                                                                                                                                                                                               |
 | --------------------------------- | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -164,6 +164,7 @@ Curated Model Context Protocol servers for AI-assisted development
 | Inside Ads                        | Marketing             | Telegram ad exchange MCP: estimate reach and cost with no account, then create and run campaigns. Official registry id ad.inside/inside-ads.                                                                                                                                        |                                                                                                                       |                                                                                                                                                                                                                                                      |
 | Actwise Ideation                  | AI & Machine Learning | Helps founders benchmark startup and product ideas before they build. Official registry id ai.actwise/ideation.                                                                                                                                                                     |                                                                                                                       |                                                                                                                                                                                                                                                      |
 | Android Remote Control MCP        | Mobile                | On-device Android MCP server (57 tools) for UI control, screenshots, files, apps, and gestures. Install the APK, then point .mcp.json at http://DEVICE_IP:PORT/mcp.                                                                                                                 | [danielealbano/android-remote-control-mcp](https://github.com/danielealbano/android-remote-control-mcp)               | ![Stars](https://img.shields.io/github/stars/danielealbano/android-remote-control-mcp?style=flat&label=Stars&color=gold) ![Last Commit](https://img.shields.io/github/last-commit/danielealbano/android-remote-control-mcp?style=flat)               |
+| Animica MCP                       | Blockchain            | Read-only chain data, balances and mining stats for the Animica post-quantum L1, free OpenAI-compatible inference, a verifiable quantum randomness beacon and the x402 paid-API catalog; no private keys                                                                            | [animicaorg/animica-mcp](https://github.com/animicaorg/animica-mcp)                                                   | ![Stars](https://img.shields.io/github/stars/animicaorg/animica-mcp?style=flat&label=Stars&color=gold) ![Last Commit](https://img.shields.io/github/last-commit/animicaorg/animica-mcp?style=flat)                                                   |
 
 ---
 
